@@ -1,0 +1,44 @@
+# Example LCONF: The light and simple readable data serialization format
+#                for dynamic configurations and data exchange.
+
+___SECTION :: 4 :: Test
+#   Comment-Line
+
+| People Table
+    #  name| age| height_cm| weight_kg|        sex| registered|
+    |  Tim | 39 |      178 |       72 |      male |      true |
+    | Dora | 58 |      161 |       56 |    female | ___NOTSET |
+    | John | 17 |      169 |     83.5 | ___NOTSET |     false |
+
+* Persons Repeated-Block
+
+    person1
+        first :: Tim
+        last :: Doe
+        age :: 39
+        registered :: true
+        salary :: -1.54e+003
+        sex :: M
+        - Interests List single-line :: Reading, Mountain Biking, Hacking
+        - sports List muli-line
+            tennis
+            football
+            soccer
+        . Favorites Single-Block
+            food :: Spaghetti
+            sport :: Soccer
+            color :: Blue
+
+    person2
+        first :: John
+        last :: Doe
+        age :: ___NOTSET
+        registered :: ___NOTSET
+        salary :: 45000
+        sex :: M
+        - sports
+        . favorites
+            food ::
+            sport :: None
+            color :: Orange
+___END

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="http://lconf.github.io/atom-language-lconf/manual/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Manual - atom-language-lconf</title>
+
+        <link href="../css/bootstrap-3.0.3.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">atom-language-lconf</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">Home</a>
+                </li>
+            
+            
+            
+                <li class="active">
+                    <a href="./">Manual</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../LICENSE/">License</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../README/">README</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="..">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../LICENSE/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/LCONF/atom-language-lconf/">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#atom-language-lconf">atom-language-lconf</a></li>
+        
+            <li><a href="#features">Features</a></li>
+        
+            <li><a href="#installation">Installation</a></li>
+        
+            <li><a href="#recommended-extras">Recommended Extras</a></li>
+        
+            <li><a href="#recommended-atom-settings">Recommended Atom Settings</a></li>
+        
+            <li><a href="#lconf-language-example-file">LCONF Language Example File</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h2 id="atom-language-lconf">atom-language-lconf</h2>
+<p><em>atom-language-lconf</em> adds <a href="http://lconf.github.io/">LCONF</a> language support in <a href="https://atom.io/">Atom-Editor</a>.</p>
+<h3 id="features">Features</h3>
+<ul>
+<li>
+<p>Syntax highlighting for <a href="http://lconf.github.io/">LCONF</a> The light and simple readable data serialization format
+    for dynamic configurations and data exchange.</p>
+</li>
+<li>
+<p>Illegal syntax highlighting helps avoiding common pitfalls.</p>
+</li>
+<li>
+<p>Snippets for common LCONF keywords and constructs (see snippets/language-lconf.cson)</p>
+<ul>
+<li><code>:</code>  - LCONF-Key-Value-Separator</li>
+<li><code>s</code>  - LCONF-Start-TAG</li>
+<li><code>e</code>  - LCONF-End-TAG</li>
+<li><code>n</code>  - LCONF-NOTSET</li>
+<li><code>k</code>  - LCONF-Key :: Value Pair</li>
+<li><code>-</code>  - LCON-List-multi-line</li>
+<li><code>-s</code> - LCON-List-single-line</li>
+<li><code>|</code>  - LCON-Table</li>
+<li><code>.</code>  - LCON-Single-Block</li>
+<li><code>*</code>  - LCON-Repeated-Block</li>
+</ul>
+</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<p>Installation happens normally either through <code>apm install atom-language-lconf</code> or through the install section of
+the settings tab within Atom.</p>
+<h3 id="recommended-extras">Recommended Extras</h3>
+<ul>
+<li>
+<p><a href="https://github.com/atom/atom-light-ui">Atom Light UI Theme</a> package is the recommendet companion UI Theme.</p>
+</li>
+<li>
+<p>The <a href="http://peter1000.github.io/atom-theme-p-light-syntax/">atom-theme-p-light-syntax</a> package is a Syntax Theme
+    package a derivative of Atom's <em>One Light Syntax Theme</em> with additional syntax highlighting for the LCONF language.</p>
+</li>
+</ul>
+<h3 id="recommended-atom-settings">Recommended Atom Settings</h3>
+<ul>
+<li><em>UI Theme</em>: <a href="https://github.com/atom/atom-light-ui">Atom Light</a></li>
+<li>fontFamily: "Liberation Mono"</li>
+<li>lineHeight: 1.3</li>
+</ul>
+<h3 id="lconf-language-example-file">LCONF Language Example File</h3>
+<p><img alt="LCONF Language Example File" src="../img/lconf_example.png" title="LCONF Language Example File" /></p></div>
+        </div>
+
+    <footer class="col-md-12">
+        <hr>
+        
+        <center>Copyright &copy; 2015, <strong>peter1000</strong> <a href="https://github.com/peter1000">https://github.com/peter1000</a>. <br /> All rights reserved.</center>
+        
+        <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+    </footer>
+
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script src="../js/base.js"></script>
+    </body>
+</html>
