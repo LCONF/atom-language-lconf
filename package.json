@@ -1,0 +1,19 @@
+{
+  "name": "atom-language-lconf",
+  "version": "0.0.0",
+  "description": "LCONF language support in Atom Editor.",
+  "keywords": [
+    "configuration",
+    "grammar",
+    "snippets",
+    "syntax",
+    "lconf"
+  ],
+  "repository": "https://github.com/LCONF/atom-language-lconf",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "dependencies": {
+  }
+}

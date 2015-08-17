@@ -1,0 +1,17 @@
+site_name: atom-language-lconf
+
+site_url: http://lconf.github.io/atom-language-lconf/
+site_description: LCONF language support in Atom Editor.
+repo_url: https://github.com/LCONF/atom-language-lconf/
+
+pages:
+- Home: 'index.md'
+- Manual: 'manual.md'
+- About:
+    - 'License': 'LICENSE.md'
+    - 'README': 'README.md'
+
+use_directory_urls: true
+copyright: Copyright &copy; 2015, <strong>peter1000</strong> <a href="https://github.com/peter1000">https://github.com/peter1000</a>. <br /> All rights reserved.
+
+theme: 'bootstrap'

@@ -1,0 +1,105 @@
+'fileTypes': [
+    'lconf'
+]
+'name': 'LCONF'
+'scopeName': 'source.lconf'
+'patterns': [
+    # First all the illegal combinations ==============================================================================
+    {
+        'comment': 'LCONF Illegal Trailing whitespace.'
+        'match': '(\\s+$).*'
+        'name': 'invalid.illegal.lconf'
+    }
+    {
+        'comment': 'LCONF Illegal LCONF-Section Start/End TAGS leading chars'
+        'match': '^.+(?:___SECTION|___END)\\b'
+        'name': 'invalid.illegal.lconf'
+    }
+    {
+        'comment': 'LCONF Illegal Comment no space between.'
+        'match': '^\\s*#[^\\s].*'
+        'name': 'invalid.illegal.lconf'
+    }
+    {
+        'comment': 'LCONF Illegal Key-Value-Separator more than 1 whitespaces'
+        'match': '.*(\\s{2,}::).*|.*(::\\s{2,}).*'
+        'name': 'invalid.illegal.lconf'
+    }
+    {
+        'comment': 'LCONF Illegal Key-Value-Separator less than 1 whitespaces'
+        'match': '.*([^\\s]::).*|.*(::[^\\s]).*'
+        'name': 'invalid.illegal.lconf'
+    }
+    {
+        'comment': 'LCONF Illegal Table-Identifier not exacte 1 whitespaces '
+        'match': '^\\s*\\|[^\\s].+(?<!\\|)$|.*(\\|\\s{2,}).+(?<!\\|)$'
+        'name': 'invalid.illegal.lconf'
+    }
+    {
+        'comment': 'LCONF Illegal List-Identifier mulit and single line not exacte 1 whitespaces '
+        'match': '^\\s*-[^\\s].+|.*(-\\s{2,}).+'
+        'name': 'invalid.illegal.lconf'
+    }
+    {
+        'comment': 'LCONF Illegal Single-Block-Identifier not exacte 1 whitespaces '
+        'match': '^\\s*\\.[^\\s].+|.*(\\.\\s{2,}).+'
+        'name': 'invalid.illegal.lconf'
+    }
+    {
+        'comment': 'LCONF Illegal Repeated-Block-Identifier not exacte 1 whitespaces '
+        'match': '^\\s*\\*[^\\s].+|.*(\\*\\s{2,}).+'
+        'name': 'invalid.illegal.lconf'
+    }
+    # =================================================================================================================
+
+    {
+        'comment': 'If the first none white character is # (one number sign) the line is considered a Comment-Line.'
+        'match': '^\\s*#.*$'
+        'name': 'comment.line.number-sign.lconf'
+    },
+    {
+        'comment': 'LCONF-Section Start/End TAGS'
+        'match': '\\b(?:___SECTION|___END)\\b'
+        'name': 'entity.name.tag.lconf'
+    }
+    {
+        'comment': 'LCONF-Section Indentation Number'
+        'match': '(?<=::\\s{1}).*?(?=\\s{1}::)'
+        'name': 'entity.name.type.section-indentation-number.lconf'
+    }
+    {
+        'comment': 'LCONF Reserved Words'
+        'match': '\\b(?:___NOTSET)\\b'
+        'name': 'storage.type.reserved.lconf'
+    }
+    {
+        'comment': 'LCONF Key-Value-Separator'
+        'match': '(::)'
+        'name': 'keyword.operator.key-value-separator.lcon'
+    }
+    {
+        'comment': 'LCONF Key of "Key :: Value Pair" may not start with "-"'
+        'match': '^(?!\\s*- (?! )).+?(?= ::)'
+        'name': 'variable.interpolation.key-value-pair.lconf'
+    }
+    {
+        'comment': 'LCONF Table-Identifier'
+        'match': '^\\s*\\| (?! ).+(?<!\\|)$'
+        'name': 'entity.name.function.table.lconf'
+    }
+    {
+        'comment': 'LCONF List-Identifiers'
+        'match': '^(\\s*- (?! )).+?(?= ::)|^(\\s*- (?! )).+$'
+        'name': 'entity.name.function.list-identifier.lconf'
+    }
+    {
+        'comment': 'LCONF Single-Block-Identifier'
+        'match': '^(\\s*\\. (?! )).+$'
+        'name': 'entity.name.function.single-block.lconf'
+    }
+    {
+        'comment': 'LCONF Repeated-Block-Identifier'
+        'match': '^(\\s*\\* (?! )).+$'
+        'name': 'entity.name.function.repeated-block.lconf'
+    }
+]

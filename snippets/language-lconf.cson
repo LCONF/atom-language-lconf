@@ -1,0 +1,44 @@
+'.source.lconf':
+    'LCONF-Key-Value-Separator':
+        'prefix': ':'
+        'body': ' :: ${2}'
+    'LCONF-Start-TAG':
+        'prefix': 's'
+        'body': '___SECTION :: 4 :: ${1:section-name}'
+    'LCONF-End-TAG':
+        'prefix': 'e'
+        'body': '___END'
+    'LCONF-NOTSET':
+        'prefix': 'n'
+        'body': '___NOTSET'
+    'LCONF-Key :: Value Pair':
+        'prefix': 'k'
+        'body': '${1:key-name} :: ${2:value}'
+    'LCON-List-multi-line':
+        'prefix': '-'
+        'body': '''
+            - ${1:list-name}
+                ${2:value}
+        '''
+    'LCON-List-single-line':
+        'prefix': '-s'
+        'body': '- ${1:list-name} :: ${2:comma-sep-values}'
+    'LCON-Table':
+        'prefix': '|'
+        'body': '''
+            | ${1:table-name}
+                | ${2:value1} | ${3:value2} |${4}
+        '''
+    'LCON-Single-Block':
+        'prefix': '.'
+        'body': '''
+            . ${1:single-block-identifier-name}
+                ${2:block-item}
+        '''
+    'LCON-Repeated-Block':
+        'prefix': '*'
+        'body': '''
+            * ${1:repeated-block-identifier-name}
+                ${2:block-name}
+                    ${3:block-item}
+        '''
