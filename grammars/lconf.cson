@@ -1,5 +1,6 @@
 'fileTypes': [
     'lconf'
+    'lconfsd'
 ]
 'name': 'LCONF'
 'scopeName': 'source.lconf'
@@ -69,7 +70,7 @@
     }
     {
         'comment': 'LCONF Reserved Words'
-        'match': '\\b(?:___NOTSET)\\b'
+        'match': '\\b(?:NOTSET)\\b'
         'name': 'storage.type.reserved.lconf'
     }
     {

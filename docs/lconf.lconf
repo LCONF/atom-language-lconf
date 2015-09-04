@@ -7,8 +7,8 @@ ___SECTION :: 4 :: Test
 | People Table
     #  name| age| height_cm| weight_kg|        sex| registered|
     |  Tim | 39 |      178 |       72 |      male |      true |
-    | Dora | 58 |      161 |       56 |    female | ___NOTSET |
-    | John | 17 |      169 |     83.5 | ___NOTSET |     false |
+    | Dora | 58 |      161 |       56 |    female | NOTSET |
+    | John | 17 |      169 |     83.5 | NOTSET |     false |
 
 * Persons Repeated-Block
 
@@ -32,8 +32,8 @@ ___SECTION :: 4 :: Test
     person2
         first :: John
         last :: Doe
-        age :: ___NOTSET
-        registered :: ___NOTSET
+        age :: NOTSET
+        registered :: NOTSET
         salary :: 45000
         sex :: M
         - sports

@@ -10,7 +10,7 @@
         'body': '___END'
     'LCONF-NOTSET':
         'prefix': 'n'
-        'body': '___NOTSET'
+        'body': 'NOTSET'
     'LCONF-Key :: Value Pair':
         'prefix': 'k'
         'body': '${1:key-name} :: ${2:value}'
